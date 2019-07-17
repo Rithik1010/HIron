@@ -103,6 +103,7 @@ GEM
     guard-minitest (2.4.4)
       guard-compat (~> 1.2)
       minitest (>= 3.0)
+    hirb (0.7.3)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
@@ -251,6 +252,7 @@ DEPENDENCIES
   faker
   guard (= 2.13.0)
   guard-minitest (= 2.4.4)
+  hirb
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
