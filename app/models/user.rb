@@ -1,5 +1,9 @@
 class User < ApplicationRecord
   attr_accessor :activation_token, :reset_token
+  has_many :bookings
+  has_many :services, through: :bookings
+  has_many :feedbacks
+  has_many :partners, through: :feedbacks
   before_save   :downcase_email
   before_create :create_activation_digest
   validates :name,  presence: true, length: { maximum: 50 }
