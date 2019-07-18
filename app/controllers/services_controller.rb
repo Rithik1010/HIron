@@ -6,5 +6,6 @@ class ServicesController < ApplicationController
 
   def show
     @service = Service.find(params[:id])
+    @partners = @service.partners
   end
 end

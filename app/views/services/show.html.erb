@@ -7,4 +7,12 @@
       </h1>
     </section>
   </aside>
+    <div class="col-md-8">
+    <% if @service.partners.any? %>
+      <h3>Service Partners (<%= @service.partners.count %>)</h3>
+      <ol class="partners">
+        <%= render @partners %>
+      </ol>
+    <% end %>
+  </div>
 </div>
