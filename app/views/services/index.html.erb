@@ -1,0 +1,10 @@
+<% provide(:title, 'All services') %>
+<h1>All services</h1>
+
+<ul class="services">
+  <% @services.each do |service| %>
+    <li>
+      <%= link_to service.serv_name, service %>
+    </li>
+  <% end %>
+</ul>
