@@ -2,8 +2,8 @@
 
 one:
   user: one
-  service: one
+  partner: one
 
 two:
   user: two
-  service: two
+  partner: two
