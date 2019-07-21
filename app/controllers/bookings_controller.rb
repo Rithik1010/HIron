@@ -5,12 +5,12 @@ class BookingsController < ApplicationController
   end
   
   def create
-    @booking = Booking.new(param[:id])
+    @booking = current_user.bookings.build(booking_params)
     if @booking.save 
-      flash[:notice] = "Booked Succesfully"
-      #render :index
+      flash[:success] = "Booked Succesfully"
+      redirect_to root_url
     else
-      flash[:notice] = 'Sorry! Booking was not done'
+      render 'static_pages/home'
       #render :new
     end
   end

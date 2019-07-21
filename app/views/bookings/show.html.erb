@@ -1,5 +1,6 @@
 <% provide(:title, @booking.user_id) %>
-<h1>
-  <%= @booking.user_id %>
-  <%= @booking.partner_id %>
-</h1>
+  <span class="user"><%= link_to @booking.user.name, @booking.user %></span>
+  <span class="partner"><%= link_to @booking.partner.partner_name, partner_url %></span>
+  <span class="timestamp">
+    Booked <%= time_ago_in_words(@booking.created_at) %> ago.
+  </span>
