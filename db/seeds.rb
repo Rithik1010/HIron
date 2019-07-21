@@ -24,20 +24,24 @@ Service.create!(serv_name:  "Electric Repair")
 
 8.times do
   name  = Faker::Company.name
-  Service.first.partners.create!(partner_name: name)
+  content = Faker::Lorem.sentence(30)
+  Service.first.partners.create!(partner_name: name, description: content)
 end
 
 8.times do
   name  = Faker::Company.name
-  Service.second.partners.create!(partner_name: name)
+  content = Faker::Lorem.sentence(30)
+  Service.second.partners.create!(partner_name: name, description: content)
 end
 
 8.times do
   name  = Faker::Company.name
-  Service.third.partners.create!(partner_name: name)
+  content = Faker::Lorem.sentence(30)
+  Service.third.partners.create!(partner_name: name, description: content)
 end
 
 8.times do
   name  = Faker::Company.name
-  Service.fourth.partners.create!(partner_name: name)
+  content = Faker::Lorem.sentence(30)
+  Service.fourth.partners.create!(partner_name: name, description: content)
 end

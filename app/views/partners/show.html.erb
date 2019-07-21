@@ -3,8 +3,9 @@
   <aside class="col-md-4">
     <section class="partner_info">
       <h1>
-        <%= @partner.partner_name %>
-      </h1>
+        <span class="partner"><%= link_to @partner.partner_name, @partner %></span>
+        <span class="description"><%= @partner.description %></span>
+        </h1>
     </section>
   </aside>
   <div class="col-md-8">

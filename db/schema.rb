@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_19_104723) do
+ActiveRecord::Schema.define(version: 2019_07_21_115955) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "user_id"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2019_07_19_104723) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "service_id"
+    t.text "description"
     t.index ["service_id"], name: "index_partners_on_service_id"
   end
 
