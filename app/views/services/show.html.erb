@@ -11,7 +11,11 @@
     <% if @service.partners.any? %>
       <h3>Service Partners (<%= @service.partners.count %>)</h3>
       <ol class="partners">
-        <%= render @partners %>
+        <% @service.partners.each do |partner| %>
+          <li>
+            <%= link_to partner.partner_name, partner %>
+          </li>
+        <% end %>
       </ol>
     <% end %>
   </div>

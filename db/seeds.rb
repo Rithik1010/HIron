@@ -8,7 +8,7 @@ User.create!(name:  "Ram",
 9.times do |n|
 name  = Faker::Name.name
 email = "example-#{n+1}@xyz.com"
-password = "password"
+password = "foobar"
 User.create!(name:  name,
    email: email,
    password:              password,
@@ -22,8 +22,22 @@ Service.create!(serv_name:  "Dish Wash")
 Service.create!(serv_name:  "Vehicle Wash")
 Service.create!(serv_name:  "Electric Repair")
 
-services = Service.order(:created_at).take(4)
 8.times do
-  name  = Faker::Name.name
-  services.each { |service| service.partners.create!(partner_name: name) }
+  name  = Faker::Company.name
+  Service.first.partners.create!(partner_name: name)
+end
+
+8.times do
+  name  = Faker::Company.name
+  Service.second.partners.create!(partner_name: name)
+end
+
+8.times do
+  name  = Faker::Company.name
+  Service.third.partners.create!(partner_name: name)
+end
+
+8.times do
+  name  = Faker::Company.name
+  Service.fourth.partners.create!(partner_name: name)
 end
