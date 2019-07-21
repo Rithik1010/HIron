@@ -7,8 +7,15 @@
         <span class="description"><%= @partner.description %></span>
         </h1>
     </section>
+    
   </aside>
   <div class="col-md-8">
     <%= render 'book' if logged_in? %>
+    <% if @partner.feedbacks.any? %>
+      <h3>Feedbacks (<%= @partner.feedbacks.count %>)</h3>
+      <ol class="feedbacks">
+        <%= render @partner.feedbacks %>
+      </ol>
+    <% end %>
   </div>
 </div>

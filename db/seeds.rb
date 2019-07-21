@@ -45,3 +45,9 @@ end
   content = Faker::Lorem.sentence(30)
   Service.fourth.partners.create!(partner_name: name, description: content)
 end
+
+
+3.times do
+  content = Faker::Lorem.sentence(10)
+  Feedback.create!(user_id: 5, partner_id: 1, content: content) 
+end
