@@ -5,10 +5,10 @@ class BookingsController < ApplicationController
   end
   
   def create
-    @booking = current_user.bookings.build(booking_params)
+    @booking = current_user.bookings.create(booking_params)
     if @booking.save 
       flash[:success] = "Booked Succesfully"
-      redirect_to root_url
+      redirect_to booking_url
     else
       render 'static_pages/home'
       #render :new
@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
   
   def index
     @user = current_user
-    @bookings = Booking.all
+    @bookings = current_user.bookings.all
   end
   
   def show

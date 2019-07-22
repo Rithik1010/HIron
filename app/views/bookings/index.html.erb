@@ -3,7 +3,6 @@
 
 <ul class="bookings">
   <% @bookings.each do |booking| %>
-    <span class="user"><%= link_to booking.user.name, booking.user %></span>
     <span class="partner"><%= link_to booking.partner.partner_name, booking.partner %></span>
     <span class="timestamp">
       Booked <%= time_ago_in_words(booking.created_at) %> ago.
