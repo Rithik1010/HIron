@@ -1,5 +1,6 @@
 <h1> Congratrulations! Your Service has been Booked </h1>
-<h2> Service Partner : <%= link_to @booking.partner.partner_name, @booking.partner %></h2>
+<h4> Service Partner : <%= link_to @booking.partner.partner_name, @booking.partner %> </h2>
+<h4> Service : <%= @booking.partner.service.serv_name %> </h3>
 <h4> Address : <%= @booking.address %></h4>
 <h5>
   Booked <%= time_ago_in_words(@booking.created_at) %> ago.

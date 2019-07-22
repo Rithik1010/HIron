@@ -1,12 +1,15 @@
 <% provide(:title, 'Your Bookings') %>
 <h1>Your Bookings</h1>
 
-<ul class="bookings">
-  <% @bookings.each do |booking| %>
-    <span class="partner"><%= link_to booking.partner.partner_name, booking.partner %></span>
-    <span class="Address"><%= booking.address %></span>
+<ol class="bookings">
+    <% @bookings.each do |booking| %>
+    <li>
+    <span class="partner">Service Partner: <%= link_to booking.partner.partner_name, booking.partner %></span>
+    <span class="service">service: <%= booking.partner.service.serv_name %></span>
+    <span class="Address">Address: <%= booking.address %></span>
     <span class="timestamp">
       Booked <%= time_ago_in_words(booking.created_at) %> ago.
     </span>
+    </li>
   <% end %>
-</ul>
+</ol>

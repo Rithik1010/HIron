@@ -7,7 +7,8 @@ class FeedbacksController < ApplicationController
     @feedback = Feedback.new(feedback_params)
     if @feedback.save 
       flash[:success] = "Feedback Noted!"
-      redirect_to @feedback
+      @partner = @feedback.partner
+      redirect_to @partner
     else
       render 'static_pages/home'
       #render :new

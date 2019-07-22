@@ -3,7 +3,7 @@
 
 <ul class="feedbacks">
   <% @feedbacks.each do |feedback| %>
-    <span class="partner"><%= link_to feedback.user.name, feedback.user %></span>
+    <span class="user"><%= link_to feedback.user.name, feedback.user %></span>
     <span class="partner"><%= link_to feedback.partner.partner_name, feedback.partner %></span>
     <span class="content"><%= feedback.content %></span>
     <span class="timestamp">
