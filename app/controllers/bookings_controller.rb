@@ -23,16 +23,6 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
   
-  def update
-    @booking = Booking.find(params[:id])
-    if @booking.update_attributes(booking_params)
-        # if update is successful
-    else 
-        # if update is unsuccessful
-    end
-    redirect_to booking_path
-  end
-  
   def booking_params
     params.require(:booking).permit(:user_id, :partner_id, :address)
   end

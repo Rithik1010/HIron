@@ -1,0 +1,7 @@
+<h1> Your Feedback has been Received </h1>
+<h2> Service Partner : <%= link_to @feedback.partner.partner_name, @feedback.partner %></h2>
+<h4> Feedback : <%= @feedback.content %></h4>
+<h5>
+  Written <%= time_ago_in_words(@feedback.created_at) %> ago.
+</h5>
+
