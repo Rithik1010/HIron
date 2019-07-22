@@ -5,10 +5,10 @@ class BookingsController < ApplicationController
   end
   
   def create
-    @booking = current_user.bookings.create(booking_params)
+    @booking = Booking.new(booking_params)
     if @booking.save 
       flash[:success] = "Booked Succesfully"
-      redirect_to booking_url
+      redirect_to @booking
     else
       render 'static_pages/home'
       #render :new
@@ -16,7 +16,6 @@ class BookingsController < ApplicationController
   end
   
   def index
-    @user = current_user
     @bookings = current_user.bookings.all
   end
   
@@ -35,6 +34,6 @@ class BookingsController < ApplicationController
   end
   
   def booking_params
-    params.permit(:user_id, :partner_id)
+    params.require(:booking).permit(:user_id, :partner_id, :address)
   end
 end

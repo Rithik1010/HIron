@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_21_143332) do
+ActiveRecord::Schema.define(version: 2019_07_22_065140) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "user_id"
     t.integer "partner_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "address"
     t.index ["partner_id"], name: "index_bookings_on_partner_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end

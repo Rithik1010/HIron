@@ -10,7 +10,7 @@
     
   </aside>
   <div class="col-md-8">
-    <%= render 'book' if logged_in? %>
+    <%= link_to "Book!", book_path(partner_id: params[:id]), class: "btn btn-lg btn-primary" %>
     <% if @partner.feedbacks.any? %>
       <h3>Feedbacks (<%= @partner.feedbacks.count %>)</h3>
       <ol class="feedbacks">
