@@ -9,7 +9,7 @@
       <%= f.hidden_field :partner_id, value: params[:partner_id] %>
     
       <%= f.label :address %>
-      <%= f.text_field :address %>
+      <%= f.text_area :address, placeholder: "Enter your address here..." %>
       <%= f.submit "Book Now", class: "btn btn-primary" %>
     <% end %>
   </div>

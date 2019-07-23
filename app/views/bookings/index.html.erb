@@ -1,6 +1,8 @@
 <% provide(:title, 'Your Bookings') %>
 <h1>Your Bookings</h1>
 
+<%= will_paginate %>
+
 <ol class="bookings">
     <% @bookings.each do |booking| %>
     <li>
@@ -13,3 +15,5 @@
     </li>
   <% end %>
 </ol>
+
+<%= will_paginate %>

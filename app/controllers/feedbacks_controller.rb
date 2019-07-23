@@ -1,4 +1,7 @@
 class FeedbacksController < ApplicationController
+  
+  before_action :correct_user,   only: :destroy
+  
   def new
     @feedback = Feedback.new
   end
@@ -16,14 +19,27 @@ class FeedbacksController < ApplicationController
   end
   
   def index
-    @feedbacks = current_user.feedbacks.all
+    @feedbacks = current_user.feedbacks.paginate(page: params[:page])
   end
   
   def show
     @feedback = Feedback.find(params[:id])
   end
   
-  def feedback_params
-    params.require(:feedback).permit(:user_id, :partner_id, :content)
+  def destroy
+    @feedback.destroy
+    flash[:success] = "Review deleted"
+    redirect_to request.referrer || root_url
   end
+
+  private
+  
+    def feedback_params
+      params.require(:feedback).permit(:user_id, :partner_id, :content)
+    end
+  
+    def correct_user
+      @feedback = current_user.feedbacks.find_by(id: params[:id])
+      redirect_to root_url if @feedback.nil?
+    end
 end

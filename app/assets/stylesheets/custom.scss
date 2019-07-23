@@ -277,17 +277,20 @@ span.picture {
   padding: 0;
   
   li {
+    margin-right: 700px;
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
   }
   .user {
+    color: #000000;
     margin-top: 5em;
-    margin-left: 60px;
+    
     padding-top: 0;
   }
   .content {
+    color: #003371;
     display: block;
-    margin-left: 60px;
+    
     img {
       display: block;
       padding: 5px 0;
@@ -296,7 +299,7 @@ span.picture {
   .timestamp {
     color: $gray-light;
     display: block;
-    margin-left: 60px;
+    
   }
   .gravatar {
     float: left;
@@ -319,3 +322,16 @@ span.picture {
   }
 }
 
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}

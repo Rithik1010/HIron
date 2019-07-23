@@ -1,7 +1,7 @@
 class ServicesController < ApplicationController
 
   def index
-    @services = Service.all
+    @services = Service.paginate(page: params[:page])
   end
 
   def show

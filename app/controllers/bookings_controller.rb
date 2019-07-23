@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
   end
   
   def index
-    @bookings = current_user.bookings.all
+    @bookings = current_user.bookings.paginate(page: params[:page])
   end
   
   def show

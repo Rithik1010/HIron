@@ -1,6 +1,8 @@
 <% provide(:title, 'Your Feedbacks') %>
 <h1>Your Feedbacks</h1>
 
+<%= will_paginate %>
+
 <ul class="feedbacks">
   <% @feedbacks.each do |feedback| %>
     <span class="user"><%= link_to feedback.user.name, feedback.user %></span>
@@ -11,3 +13,5 @@
     </span>
   <% end %>
 </ul>
+
+<%= will_paginate %>
