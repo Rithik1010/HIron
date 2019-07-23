@@ -15,7 +15,18 @@
       </h2>
     </section>
   </aside>
-</div>
+  
+  <div class="col-md-8">
+    <div class="reviews">
+      <h1> Reviews 
+        <%= render @partner.reviews %>
+        <div>
+          <%= link_to "Add Reviews", new_partner_review_path(@partner), class: "btn-custom" %>
+        </div>
+      </h1>
+    </div>
+  </div>
+
   <div class="col-md-12">
     <% if @partner.feedbacks.any? %>
       <h3>Feedbacks (<%= @partner.feedbacks.count %>)</h3>
