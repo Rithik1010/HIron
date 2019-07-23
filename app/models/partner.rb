@@ -5,5 +5,6 @@ class Partner < ApplicationRecord
   has_many :feedbacks
   has_many :users, through: :feedbacks
   validates :description, presence: true
+  has_many :reviews
   ratyrate_rateable 'rating'
 end

@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :partners, through: :bookings
   has_many :feedbacks
   has_many :partners, through: :feedbacks
+  has_many :reviews
   ratyrate_rater
   before_save   :downcase_email
   before_create :create_activation_digest
