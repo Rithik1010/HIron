@@ -11,14 +11,14 @@
       </p>
       <h2>
         <%= link_to "Book!", book_path(partner_id: params[:id]), class: "btn btn-lg btn-primary" %>
-        <%= link_to "Add a review", feed_path(partner_id: params[:id]), class: "btn btn-lg btn-primary" %>
+        <%= link_to "Write a feedback", feed_path(partner_id: params[:id]), class: "btn btn-lg btn-primary" %>
       </h2>
     </section>
   </aside>
 </div>
   <div class="col-md-12">
     <% if @partner.feedbacks.any? %>
-      <h3>Reviews (<%= @partner.feedbacks.count %>)</h3>
+      <h3>Feedbacks (<%= @partner.feedbacks.count %>)</h3>
       <ol class="feedbacks">
         <%= render @partner.feedbacks %>
       </ol>

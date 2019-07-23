@@ -1,5 +1,5 @@
-<% provide(:title, 'Review') %>
-<h1>Review</h1>
+<% provide(:title, 'Feedback') %>
+<h1>Feedback</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -7,7 +7,7 @@
     
       <%= f.hidden_field :user_id, value: current_user.id %>
       <%= f.hidden_field :partner_id, value: params[:partner_id] %>
-      <%= f.text_area :content, placeholder: "Write a review..." %>
+      <%= f.text_area :content, placeholder: "Write a feedback..." %>
       <%= f.submit "Submit Now", class: "btn btn-primary" %>
     <% end %>
   </div>
