@@ -1,6 +1,6 @@
 <li class= "review">
-  <span class="user">User: <%= review.user.name %></span>
-  <span class="rating">Rating: <%= review.rating %></span>
+  <span class="user"><%= review.user.name %></span>
+  <span class="review-rating" data-score="<%= review.rating %>"></span>
   <span class="comment"><%= review.comment %></span>
   <% if logged_in? %>
     <% if current_user == review.user %>

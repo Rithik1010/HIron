@@ -11,7 +11,7 @@
       </p>
       <h2>
         <%= link_to "Book!", book_path(partner_id: params[:id]), class: "btn btn-lg btn-primary" %>
-        <%= link_to "Write a feedback", feed_path(partner_id: params[:id]), class: "btn btn-lg btn-primary" %>
+        <!--<%= link_to "Write a feedback", feed_path(partner_id: params[:id]), class: "btn btn-lg btn-primary" %>-->
       </h2>
     </section>
   </aside>
@@ -28,7 +28,7 @@
   <div class="col-md-12">
     <div class="reviews">
       <h3> Reviews (<%= @partner.reviews.count %>) </h3>
-      <div><%= link_to "Add Reviews", new_partner_review_path(@partner), class: "btn-custom" %></div>
+      <div><%= link_to "Add Review", new_partner_review_path(@partner), class: "btn-custom" %></div>
       <ol class="feedbacks">
         <%= render @partner.reviews %>
       </ol>
@@ -36,3 +36,13 @@
     </div>
   </div>
 </div>
+
+<script>
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path:'/assets/'
+  });
+</script>
