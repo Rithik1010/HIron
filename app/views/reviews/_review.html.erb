@@ -2,4 +2,12 @@
   <span class="user">User: <%= review.user.name %></span>
   <span class="rating">Rating: <%= review.rating %></span>
   <span class="comment"><%= review.comment %></span>
+  <% if logged_in? %>
+    <% if current_user == review.user %>
+      <div class="links btn-group">
+        <%= link_to "Edit", edit_partner_review_path(review.partner, review), class: "btn btn-custom" %>
+        <%= link_to "Delete", partner_review_path(review.partner, review), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-custom" %>
+      </div>
+    <% end %>
+  <% end %>
 </li>
