@@ -13,10 +13,21 @@
       <ol class="partners">
         <% @service.partners.each do |partner| %>
           <li>
-            <%= link_to partner.partner_name, partner %>
+            <span class="partner name"> <%= link_to partner.partner_name, partner %> </span>  
+            <span class="avg-review-rating" data-score=<%= partner.reviews.average(:rating) %>></span>
           </li>
         <% end %>
       </ol>
     <% end %>
   </div>
 </div>
+
+<script>
+  $('.avg-review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
