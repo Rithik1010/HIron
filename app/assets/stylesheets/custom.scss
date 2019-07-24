@@ -335,3 +335,45 @@ span.picture {
   width: auto;
   margin-left: 0;
 }
+
+/* reviews */
+
+.reviews {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    margin-right: 700px;
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    color: #000000;
+    margin-top: 5em;
+    
+    padding-top: 0;
+  }
+  .rating {
+    color: #000000;
+    display: block;
+  }
+  .comment {
+    color: #003371;
+    display: block;
+    
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}

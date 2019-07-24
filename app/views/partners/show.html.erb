@@ -16,23 +16,23 @@
     </section>
   </aside>
   
-  <div class="col-md-8">
-    <div class="reviews">
-      <h1> Reviews 
-        <%= render @partner.reviews %>
-        <div>
-          <%= link_to "Add Reviews", new_partner_review_path(@partner), class: "btn-custom" %>
-        </div>
-      </h1>
-    </div>
-  </div>
-
+  <!--<div class="col-md-8">-->
+  <!--  <% if @partner.feedbacks.any? %>-->
+  <!--    <h3>Feedbacks (<%= @partner.feedbacks.count %>)</h3>-->
+  <!--    <ol class="feedbacks">-->
+  <!--      <%= render @partner.feedbacks %>-->
+  <!--    </ol>-->
+  <!--  <% end %>-->
+  <!--</div>-->
+  
   <div class="col-md-12">
-    <% if @partner.feedbacks.any? %>
-      <h3>Feedbacks (<%= @partner.feedbacks.count %>)</h3>
+    <div class="reviews">
+      <h3> Reviews (<%= @partner.reviews.count %>) </h3>
+      <div><%= link_to "Add Reviews", new_partner_review_path(@partner), class: "btn-custom" %></div>
       <ol class="feedbacks">
-        <%= render @partner.feedbacks %>
+        <%= render @partner.reviews %>
       </ol>
-    <% end %>
+      </h3>
+    </div>
   </div>
 </div>
