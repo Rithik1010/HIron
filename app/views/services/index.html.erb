@@ -1,10 +1,37 @@
-<% provide(:title, 'All services') %>
-<h1>All services</h1>
+<% if logged_in? %>
+  <% provide(:title, 'All services') %>
+  <h1>All services</h1>
 
-<%= will_paginate %>
+  <div class="row">
+    <div class='col-md-3'>
+      <a href="services/1" >
+        <img src="assets/laundry.jpg" class="img-thumbnail img-fluid" >
+        <p class="centre">Laundry</p>
+      </a>
+    </div>
+    <div class='col-md-3'>
+      <a href="services/2" >
+        <img src="assets/car.jpg" class="img-thumbnail img-fluid" >
+        <p class="centre">Car Wash</p>
+      </a>
+    </div>
+    <div class='col-md-3'>
+      <a href="services/3" >
+        <img src="assets/dishes.jpg" class="img-thumbnail img-fluid" >
+        <p class="centre">Dish Wash</p>
+      </a>
+    </div>
+    <div class='col-md-3'>
+      <a href="services/4" >
+        <img src="assets/electric.jpg" class="img-thumbnail img-fluid" >
+        <p class="centre">Electric Repair</p>
+      </a>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1>HIron</h1>
+    <%= link_to "Create an account", signup_path, class: "btn btn-lg btn-primary" %>
+  </div>
+<% end %>
 
-<ul class="services">
-  <%= render @services %>
-</ul>
-
-<%= will_paginate %>

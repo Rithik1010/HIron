@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Lato); 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -9,10 +10,19 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
-/* universal */
+@mixin background-tile {
+	box-sizing: border-box;
+	background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 40px;
+	box-shadow: 1px 1px 3px 4px #ccc;
+	padding: 0.6em 0.6em;
+}
 
 body {
   padding-top: 60px;
+  background:  linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
+	font-family: 'Lato', sans-serif;
 }
 
 section {
@@ -67,37 +77,6 @@ p {
   text-decoration: none;
 }
 
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-}
-
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
-
 /* miscellaneous */
 
 .debug_dump {
@@ -150,13 +129,16 @@ aside {
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
+  clear: both;
+  float: left;
+  border-radius: 10px;
   margin-bottom: 15px;
-  @include box_sizing;
+  // @include box_sizing;
 }
 
-input {
-  height: auto !important;
-}
+// input {
+//   height: auto !important;
+// }
 
 #error_explanation {
   color: red;
@@ -173,21 +155,11 @@ input {
   }
 }
 
-/* Services index */
-
-.services {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
-  }
-}
 
 /* partners */
 
 .partners {
+  // @include background-tile;
   list-style: none;
   padding: 0;
   li {
@@ -206,6 +178,12 @@ input {
       padding: 5px 0;
     }
   }
+  .avg-rating {
+		font-size: 1.5em;
+		margin-top: 75px;
+		margin-bottom: 5px;
+		font-weight: bold;
+	}
   aside {
   textarea {
     height: 100px;
@@ -336,44 +314,85 @@ span.picture {
   margin-left: 0;
 }
 
-/* reviews */
+/* Reviews styles */
 
 .reviews {
-  list-style: none;
-  padding: 0;
+
+  @include background-tile;
+  // width:"90%"
   
   li {
-    margin-right: 700px;
+    margin-right: 0px;
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
   }
-  .user {
-    color: #000000;
-    margin-top: 5em;
-    
-    padding-top: 0;
-  }
-  .review-rating {
-    color: #000000;
-    display: block;
-  }
-  .comment {
-    color: #003371;
-    display: block;
-    
-    img {
-      display: block;
-      padding: 5px 0;
+
+	.review {
+
+    // border-bottom: 1px solid gainsboro;
+		// margin-bottom: 15px;
+		// padding-bottom: 10px;
+
+    .user {
+      color: #000000;
+      margin-top: 5em;
+      
+      padding-top: 0;
     }
-  }
-  .timestamp {
-    color: $gray-light;
-    display: block;
     
-  }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
-  }
+    .review-rating {
+      color: #000000;
+      display: block;
+    }
+
+		.review-comment {
+			font-size: 1.05em;
+			line-height: 1.5;
+    }
+	}
+
+	.new-review {
+		padding-top: 8px;
+	}
+
+}
+
+.btn-custom {
+	// color: darken(#bdbdbd, 5%);
+	// background-color: #fff;
+	border: 1px solid darken(#c0c0c0, 5%);
+	padding: 8px 20px;
+	border-radius: 5px;
+	font-family: 'Lato', sans-serif;
+	&:hover {
+		// text-decoration: none;
+		background-color: darken(#bdbdbd, 5%);
+		color: #fff;
+		transition: 0.5s;
+	}
+}
+
+.btn-custom2 {
+	color: #fff;
+	background-color: #222;
+	border: 1px solid #222;
+	padding: 8px 20px;
+	border-radius: 10px;
+	font-family: 'Lato', sans-serif;
+	&:hover {
+		text-decoration: none;
+		background-color: #333;
+		color: #fff;
+		transition: 0.5s;
+	}	
+}
+
+
+.links {
+
+	.btn-custom {
+		padding: 3px 10px;
+		font-weight: 300;
+	}
+
 }

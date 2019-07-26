@@ -27,8 +27,8 @@
   
   <div class="col-md-12">
     <div class="reviews">
-      <h3> Reviews (<%= @partner.reviews.count %>) </h3>
-      <div><%= link_to "Add Review", new_partner_review_path(@partner), class: "btn-custom" %></div>
+      <h3> Reviews (<%= @partner.reviews.count %>) 
+      <div class="links btn-group"><%= link_to "Write a review", new_partner_review_path(@partner), class: "btn btn-custom" %></div> </h3>
       <ol class="feedbacks">
         <%= render @partner.reviews %>
       </ol>
