@@ -2,8 +2,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-// $gray-medium-light: #eaeaea;
-
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
@@ -22,7 +20,9 @@
 body {
   padding-top: 60px;
   background:  linear-gradient(40deg, #d1edf0 10%);
-	font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
+  background-image: url(/assets/bg5.jpg);
+  background-size: cover;
 }
 
 section {
@@ -31,6 +31,7 @@ section {
 
 .center {
   text-align: center;
+  color: #222;
 }
 
 .center h1 {
@@ -225,90 +226,17 @@ input, textarea, select, .uneditable-input {
     display: block;
     margin-left: 60px;
   }
+
+  .Bookid {
+    display: block;
+    margin-left: 60px;
+  }
+
   .gravatar {
     float: left;
     margin-right: 10px;
     margin-top: 5px;
   }
-}
-
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
-}
-
-span.picture {
-  margin-top: 10px;
-  input {
-    border: 0;
-  }
-}
-/* feedbacks */
-
-.feedbacks {
-  list-style: none;
-  padding: 0;
-  
-  li {
-    margin-right: 700px;
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
-  .user {
-    color: #000000;
-    margin-top: 5em;
-    
-    padding-top: 0;
-  }
-  .content {
-    color: #003371;
-    display: block;
-    
-    img {
-      display: block;
-      padding: 5px 0;
-    }
-  }
-  .timestamp {
-    color: $gray-light;
-    display: block;
-    
-  }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
-  }
-}
-
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
-}
-
-span.picture {
-  margin-top: 10px;
-  input {
-    border: 0;
-  }
-}
-
-.checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
-  span {
-    margin-left: 20px;
-    font-weight: normal;
-  }
-}
-
-#session_remember_me {
-  width: auto;
-  margin-left: 0;
 }
 
 /* Reviews styles */
@@ -317,6 +245,7 @@ span.picture {
 
   @include background-tile;
   // width:"90%"
+  list-style: none;
   
   li {
     margin-right: 0px;
@@ -358,11 +287,11 @@ span.picture {
 	// color: darken(#bdbdbd, 5%);
 	// background-color: #fff;
 	border: 1px solid darken(#c0c0c0, 5%);
-	padding: 8px 20px;
+	padding: 3px 10px;
 	border-radius: 5px;
 	font-family: 'Lato', sans-serif;
 	&:hover {
-		// text-decoration: none;
+		text-decoration: none;
 		background-color: darken(#bdbdbd, 5%);
 		color: #fff;
 		transition: 0.5s;
@@ -382,14 +311,4 @@ span.picture {
 		color: #fff;
 		transition: 0.5s;
 	}	
-}
-
-
-.links {
-
-	.btn-custom {
-		padding: 3px 10px;
-		font-weight: 300;
-	}
-
 }

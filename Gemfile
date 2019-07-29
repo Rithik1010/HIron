@@ -10,7 +10,7 @@ gem 'faker'
 gem 'will_paginate'
 gem 'ratyrate'
 gem 'simple_form'
-gem 'bootstrap-sass', '3.4.1'
+gem 'bootstrap-sass'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 gem 'hirb'
@@ -37,7 +37,6 @@ gem 'jbuilder', '~> 2.5'
 
 #Use ActiveStorage variant
 gem 'mini_magick', '~> 4.8'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -70,6 +69,11 @@ group :test do
   gem 'guard',                    '2.13.0'
   gem 'guard-minitest',           '2.4.4'
 end
+
+group :production do
+  gem 'pg'
+end
+
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -14,8 +14,10 @@ class ReviewsController < ApplicationController
     if(@review.save)
       redirect_to partner_path(@partner)
     else
+      flash.now[:danger] = "You've reviewed this Service partner!"
       render 'new'
     end
+    
   end
   
   def edit

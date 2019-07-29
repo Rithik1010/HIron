@@ -1,7 +1,0 @@
-<li id="partner-<%= partner.id %>">
-  <span class="partner_name"><%= link_to partner.partner_name, partner_url %></span>
-  <span class="booking">
-      <%= link_to "Book Now", booking_url, method: :create,
-                                       data: { confirm: "You sure?" } %>
-  </span>
-</li>

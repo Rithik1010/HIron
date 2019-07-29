@@ -1,13 +1,6 @@
 <% provide(:title, @service.serv_name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= @service.serv_name %>
-      </h1>
-    </section>
-  </aside>
-    <div class="col-md-8">
+  <div class="row">
+    <h1><%= @service.serv_name %></h1> 
     <% if @service.partners.any? %>
       <h3>Service Partners (<%= @service.partners.count %>)</h3>
       <ol class="partners">
@@ -20,9 +13,9 @@
       </ol>
     <% end %>
   </div>
-</div>
 
 <script>
+  $('.avg-review-rating').raty();
   $('.avg-review-rating').raty({
     readOnly: true,
     score: function() {
