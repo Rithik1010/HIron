@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  post '/rate' => 'rater#create', :as => 'rate'
+  post   '/rate' => 'rater#create', :as => 'rate'
   root   'services#index'
   get    '/help',       to: 'static_pages#help'
   get    '/about',      to: 'static_pages#about'

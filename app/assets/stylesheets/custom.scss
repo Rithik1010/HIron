@@ -2,7 +2,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$gray-medium-light: #eaeaea;
+// $gray-medium-light: #eaeaea;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -21,16 +21,12 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
-  background:  linear-gradient(40deg, #d1edf0 10%, #ecc8c6 100%);
+  background:  linear-gradient(40deg, #d1edf0 10%);
 	font-family: 'Lato', sans-serif;
 }
 
 section {
   overflow: auto;
-}
-
-textarea {
-  resize: vertical;
 }
 
 .center {
@@ -133,6 +129,7 @@ input, textarea, select, .uneditable-input {
   float: left;
   border-radius: 10px;
   margin-bottom: 15px;
+  resize: vertical;
   // @include box_sizing;
 }
 
