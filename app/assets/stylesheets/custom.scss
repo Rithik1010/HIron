@@ -19,10 +19,10 @@
 
 body {
   padding-top: 60px;
-  background:  linear-gradient(40deg, #d1edf0 10%);
+  background: linear-gradient(to right, #ffffff, #648880 );
   font-family: 'Lato', sans-serif;
-  background-image: url('bg5.jpg');
-  background-size: cover;
+  // background-image: url('bg5.jpg');
+  // background-size: cover;
 }
 
 section {
@@ -33,6 +33,7 @@ section {
   text-align: center;
   color: #222;
 }
+
 
 .center h1 {
   margin-bottom: 10px;
@@ -160,6 +161,7 @@ input, textarea, select, .uneditable-input {
   // @include background-tile;
   list-style: none;
   padding: 0;
+  
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
@@ -167,6 +169,7 @@ input, textarea, select, .uneditable-input {
   .partner_name {
     margin-top: 5em;
     padding-top: 0;
+    
   }
   .description {
     display: block;
@@ -246,18 +249,19 @@ input, textarea, select, .uneditable-input {
   @include background-tile;
   // width:"90%"
   list-style: none;
-  
+  background-color: darken(#ffffff, 5%);
   li {
     margin-right: 0px;
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid #d4cfcf;
   }
 
 	.review {
 
     // border-bottom: 1px solid gainsboro;
 		// margin-bottom: 15px;
-		// padding-bottom: 10px;
+    // padding-bottom: 10px;
+    
 
     .user {
       color: #000000;

@@ -6,7 +6,7 @@
       <ol class="partners">
         <% @service.partners.each do |partner| %>
           <li>
-            <span class="partner name"> <%= link_to partner.partner_name, partner %> </span>  
+            <span class="partner-link"> <%= link_to partner.partner_name, partner %> &nbsp</span>  
             <span class="avg-review-rating" data-score=<%= partner.reviews.average(:rating) %>></span>
           </li>
         <% end %>
