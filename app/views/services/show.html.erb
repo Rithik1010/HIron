@@ -6,8 +6,8 @@
       <ol class="partners">
         <% @service.partners.each do |partner| %>
           <li>
-            <a class="partner removelinkdefault"> <%= link_to partner.partner_name, partner %> &nbsp</a>  
-            <a class="avg-review-rating" data-score=<%= partner.reviews.average(:rating) %>></a>
+            <%= link_to partner.partner_name, partner, class:"partner" %> &nbsp  
+            <span class="avg-review-rating" data-score=<%= partner.reviews.average(:rating) %>></span>
           </li>
         <% end %>
       </ol>

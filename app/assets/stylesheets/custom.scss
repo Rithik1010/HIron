@@ -12,14 +12,14 @@
 	box-sizing: border-box;
 	background-color: #fff;
   border-radius: 5px;
-  // margin-bottom: 40px;
-	box-shadow: 1px 1px 1px 1px rgb(65, 64, 64);
+  margin-bottom: 40px;
+	box-shadow: 1px 1px 1px 1px rgb(158, 155, 155);
 	padding: 0.6em 0.6em;
 }
 
 body {
   padding-top: 60px;
-  background: linear-gradient(to right, #ffffff, #648880 );
+  background: linear-gradient(to right, #648880, #dfe7e1);
   font-family: 'Lato', sans-serif;
   // background-image: url('bg5.jpg');
   // background-size: cover;
@@ -129,7 +129,7 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   clear: both;
   float: left;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-bottom: 15px;
   resize: vertical;
   // @include box_sizing;
@@ -168,10 +168,14 @@ input, textarea, select, .uneditable-input {
     border-top: 1px solid #e8e8e8;
   }
 
-  .partner_name {
+  .partner {
     margin-top: 5em;
     padding-top: 0;
+    color: #fff;
     text-decoration: none;
+    &:hover {
+      color: #000;
+    }
   }
   .description {
     display: block;
@@ -200,19 +204,23 @@ input, textarea, select, .uneditable-input {
 .bookings {
   list-style: none;
   padding: 0;
+  
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
+    margin-left: 60px;
   }
   .partner {
+    // text-decoration: none;  
+    color: rgb(241, 232, 232);
     margin-top: 5em;
-    margin-left: 60px;
+    
     padding-top: 5px 0;
   }
   
   .service{
     display: block;
-    margin-left: 60px;
+    
     img {
       display: block;
       padding: 5px 0;
@@ -220,21 +228,22 @@ input, textarea, select, .uneditable-input {
   }
   .Address {
     display: block;
-    margin-left: 60px;
+    
     img {
       display: block;
       padding: 5px 0;
     }
   }
   .timestamp {
-    color: $gray-light;
+    font-size: 80%;
+    color: rgb(78, 68, 68);
     display: block;
-    margin-left: 60px;
+    
   }
 
   .Bookid {
     display: block;
-    margin-left: 60px;
+    
   }
 
   .gravatar {
@@ -299,7 +308,7 @@ input, textarea, select, .uneditable-input {
 	&:hover {
 		text-decoration: none;
 		background-color: darken(#bdbdbd, 5%);
-		color: #fff;
+		color: #000;
 		transition: 0.5s;
 	}
 }
@@ -308,27 +317,13 @@ input, textarea, select, .uneditable-input {
 	color: #fff;
 	background-color: #222;
 	border: 1px solid #222;
-	padding: 8px 20px;
-	border-radius: 10px;
+	padding: 4px 20px;
+	border-radius: 5px;
 	font-family: 'Lato', sans-serif;
 	&:hover {
 		text-decoration: none;
-		background-color: #333;
-		color: #fff;
+		background-color: darken(#bdbdbd, 5%);
+		color: #000;
 		transition: 0.5s;
 	}	
 }
-
-.row-alt {
-  background: #ffffff;
-  padding: 44px 0 22px 0;
-}
-
-.lead {
- text-align: center;
-}
-.lead p {
- font-size: 21px;
- line-height: 33px;
-}
-
