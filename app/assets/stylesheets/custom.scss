@@ -12,8 +12,8 @@
 	box-sizing: border-box;
 	background-color: #fff;
   border-radius: 5px;
-  margin-bottom: 40px;
-	box-shadow: 1px 1px 3px 4px #ccc;
+  // margin-bottom: 40px;
+	box-shadow: 1px 1px 1px 1px rgb(65, 64, 64);
 	padding: 0.6em 0.6em;
 }
 
@@ -163,13 +163,15 @@ input, textarea, select, .uneditable-input {
   padding: 0;
   
   li {
+    // @include background-tile;
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
   }
+
   .partner_name {
     margin-top: 5em;
     padding-top: 0;
-    
+    text-decoration: none;
   }
   .description {
     display: block;
@@ -316,3 +318,17 @@ input, textarea, select, .uneditable-input {
 		transition: 0.5s;
 	}	
 }
+
+.row-alt {
+  background: #ffffff;
+  padding: 44px 0 22px 0;
+}
+
+.lead {
+ text-align: center;
+}
+.lead p {
+ font-size: 21px;
+ line-height: 33px;
+}
+
