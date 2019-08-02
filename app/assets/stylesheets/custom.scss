@@ -32,6 +32,7 @@ section {
 .center {
   text-align: center;
   color: #222;
+  padding-top: 9px;
 }
 
 
@@ -192,11 +193,11 @@ input, textarea, select, .uneditable-input {
 		font-weight: bold;
 	}
   aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
+    textarea {
+      height: 100px;
+      margin-bottom: 5px;
+    }
   }
-}
 }
 
 /* Bookings index */
@@ -304,7 +305,8 @@ input, textarea, select, .uneditable-input {
 	border: 1px solid darken(#c0c0c0, 5%);
 	padding: 3px 10px;
 	border-radius: 5px;
-	font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
+  box-shadow: 0 2px 0 #929394;
 	&:hover {
 		text-decoration: none;
 		background-color: darken(#bdbdbd, 5%);
@@ -319,11 +321,26 @@ input, textarea, select, .uneditable-input {
 	border: 1px solid #222;
 	padding: 4px 20px;
 	border-radius: 5px;
-	font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
+  box-shadow: 0 2px 0 #b7b9b9;
 	&:hover {
 		text-decoration: none;
-		background-color: darken(#bdbdbd, 5%);
-		color: #000;
+		background-color: darken(#535151, 5%);
+		color: #fff;
 		transition: 0.5s;
 	}	
+}
+
+.part_name{
+  color: rgb(240, 230, 230);
+}
+
+.btn-custom:active,
+.btn-custom2:active {
+  // box-shadow: 0 0.1px 0 #7e7f80;
+  transform: translateY(5px) translateX(-5px);
+}
+
+.style_img:hover {
+  transform: scale(1.1);
 }
