@@ -14,7 +14,7 @@
   border-radius: 5px;
   margin-bottom: 40px;
 	box-shadow: 1px 1px 1px 1px rgb(158, 155, 155);
-	padding: 0.6em 0.6em;
+  padding: 0.6em 0.6em;
 }
 
 body {
@@ -159,6 +159,7 @@ input, textarea, select, .uneditable-input {
 /* partners */
 
 .partners {
+  
   // @include background-tile;
   list-style: none;
   padding: 0;
@@ -318,14 +319,14 @@ input, textarea, select, .uneditable-input {
 .btn-custom2 {
 	color: #fff;
 	background-color: #222;
-	border: 1px solid #222;
 	padding: 4px 20px;
 	border-radius: 5px;
   font-family: 'Lato', sans-serif;
-  box-shadow: 0 2px 0 #b7b9b9;
+  // box-shadow: 0 2px 0 #b7b9b9;
 	&:hover {
-		text-decoration: none;
-		background-color: darken(#535151, 5%);
+    text-decoration: none;
+    // background-color: darken(#535151, 5%);
+    transform: scale(0.97);
 		color: #fff;
 		transition: 0.5s;
 	}	
@@ -335,12 +336,32 @@ input, textarea, select, .uneditable-input {
   color: rgb(240, 230, 230);
 }
 
+.move-left {
+  margin-left: 10px;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 .btn-custom:active,
-.btn-custom2:active {
+  .btn-custom2:active{
   // box-shadow: 0 0.1px 0 #7e7f80;
   transform: translateY(5px) translateX(-5px);
 }
 
 .style_img:hover {
   transform: scale(1.1);
+  // transition-duration: 0.5s;
 }
+
+.pagination a{     
+  // display: inline-block; 
+  font-weight:bold; 
+  // font-size:25px; 
+  color: black; 
+  // float: left; 
+  padding: 2px 4px; 
+  text-decoration: none; 
+  border:1px solid black; 
+  background-color:#c5cec5; 
+} 
