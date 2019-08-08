@@ -365,3 +365,23 @@ input, textarea, select, .uneditable-input {
   border:1px solid black; 
   background-color:#c5cec5; 
 } 
+
+.hm-image {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    height: 100%;
+}
+
+.hm-image:before {
+  // position: absolute;
+  content: "";
+  position: absolute;
+  background: url('build.jpg');
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(10px);
+}
