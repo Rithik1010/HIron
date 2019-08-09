@@ -30,7 +30,105 @@
       </div>
     </div>
   <% else %>
-    <div class="center">
-      <h1>HIron</h1>
+    <body class="home-page-bg">  </body>
+    <div class="home-page">
+        <!-- Header Area -->
+        <header id="showcase" class="grid">
+            <div class="bg-image"></div>
+            <div class="content-wrap">
+                <h1>Welcome to HIron App</h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minima assumenda perspiciatis dolor quae consequatur optio delectus neque distinctio nulla?</p>
+                <%= link_to "Sign up", signup_path, class: "btn"%>
+            </div>
+        </header>
+
+        <!-- Main Area -->
+        <main id="main">
+            
+            <!-- Section A -->
+            <section id="section-a" class="grid">
+                <div class="content-wrap">
+                    <h2 class="content-title"> Providing every Service </h2>
+                    <div class="content-text">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nihil incidunt perspiciatis, vel doloribus ut aliquam cum voluptatem placeat rerum quibusdam! Illo eaque facere repudiandae, ipsum nam sapiente excepturi, natus magnam numquam in amet eius dolores fuga iure, tempore labore!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section B -->
+            <section id="section-b" class="grid">
+                <ul>
+                    <li>
+                        <div class="card">
+                            <img src="laundry.jpg" alt="">
+                            <div class="card-content">
+                                <h3 class="card-title"> Laundry Wash</h3>
+                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque beatae </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="card">
+                            <img src="dishes.jpg" alt="">
+                            <div class="card-content">
+                                <h3 class="card-title"> Dish Wash </h3>
+                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque beatae </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="card">
+                            <img src="car.jpg" alt="">
+                            <div class="card-content">
+                                <h3 class="card-title"> Car Wash </h3>
+                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque beatae </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="card">
+                            <img src="electric.jpg" alt="">
+                            <div class="card-content">
+                                <h3 class="card-title"> Electric Repair </h3>
+                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque beatae </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Section C -->
+            <section id="section-c" class="grid">
+                <div class="content-wrap">
+                    <h2 class="content-title"> We have all the things you need </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi possimus consectetur eligendi harum iusto rem ullam pariatur sed magnam necessitatibus.</p>
+                </div>
+            </section>
+
+            <!-- Section D -->
+            <section id="section-d" class="grid">
+                <div class="box">
+                    <h2 class="content-title">Contact Us</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias debitis saepe explicabo soluta eius quibusdam aperiam voluptatum quis expedita doloribus.</p>
+                    <p>contact@soandso.com</p>
+                </div>
+
+                <div class="box">
+                    <h2 class="content-tile">About Our Company</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus maiores quos magnam non vel. Iure vitae vero ab dicta tenetur rerum ut assumenda quibusdam dolorum distinctio? Eos alias non facilis?</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="main-footer" class="grid">
+            <div>Code Astra</div>
+            <div>
+                Project By <a href="https://www.facebook.com/roshan.rathod.370" target="_blank">Roshan</a>
+            </div>
+        </footer>
     </div>
   <% end %>
