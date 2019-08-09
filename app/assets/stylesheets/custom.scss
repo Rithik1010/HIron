@@ -21,11 +21,12 @@ body {
   padding-top: 60px;
   padding-left: 200px;
   padding-right: 200px;
-  // background: linear-gradient(to right, #648880, #dfe7e1);
+  background: lightblue;
   font-family: 'Lato', sans-serif;
-  background: url('sky.jpg');
+  // background: url('sky.jpg');
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 section {
@@ -458,9 +459,9 @@ input, textarea, select, .uneditable-input {
     
     #section-a {
         color: #333;
-        background: #fff;
+        background: #eaeaea;
         padding: 2rem;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
     }
     
     /* Section  */
@@ -473,19 +474,20 @@ input, textarea, select, .uneditable-input {
         list-style: none;
         margin: 0;
         padding: 0;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
         padding-left: 10rem;
         padding-right: 10rem;
     }
     
-    #section-b li,
-    #section-c {
+    #section-b li {
         background: #fff;
+        margin-bottom: 2rem;
         color: #333;
     }
 
-    #section-b li {
-      margin-bottom: 1rem;
+    #section-c {
+      color: #fff;
+      background: #333;
     }
 
     #section-b li {
@@ -500,7 +502,7 @@ input, textarea, select, .uneditable-input {
     
     #section-d .box {
         padding: 2rem;
-        background: #333;
+        background: rgb(81, 77, 139);
         color: #fff;
     }
     
@@ -548,7 +550,7 @@ input, textarea, select, .uneditable-input {
     
         #section-b ul {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-around;
         }
     
         #section-b li {
