@@ -1,6 +1,7 @@
 
   <% if logged_in? %>
     <% provide(:title, 'All services') %>
+
     <h1>All services</h1>
     <div class="service-images">
         <ul>
@@ -40,7 +41,9 @@
                 </div>
             </li>
         </ul>
+        </div>
     </div>
+
   <% else %>
     <body class="home-page-padding">  </body>
     <div class="home-page">
@@ -143,3 +146,5 @@
         </footer>
     </div>
   <% end %>
+
+
