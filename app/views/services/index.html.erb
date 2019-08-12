@@ -2,32 +2,44 @@
   <% if logged_in? %>
     <% provide(:title, 'All services') %>
     <h1>All services</h1>
-    
-    <div class="row">
-      <div class='col-md-3'>
-        <a href="services/1" >
-        <%= image_tag "laundry.jpg", class: 'img-thumbnail img-fluid style_img' %>
-        </a>
-        <p class="center">Laundry</p>
-      </div>
-      <div class='col-md-3'>
-        <a href="services/2" >
-          <%= image_tag "dishes.jpg", class: 'img-thumbnail img-fluid style_img' %>
-        </a>
-        <p class="center">Dish Wash</p>
-      </div>
-      <div class='col-md-3'>
-        <a href="services/3" >
-        <%= image_tag "car.jpg", class: 'img-thumbnail img-fluid style_img' %>
-        </a>
-        <p class="center">Vehicle Wash</p>
-      </div>
-      <div class='col-md-3'>
-        <a href="services/4" >
-        <%= image_tag "electric.jpg", class: 'img-thumbnail img-fluid style_img' %>
-        </a>
-        <p class="center">Electric Repair</p>
-      </div>
+    <div class="service-images">
+        <ul>
+            <li>
+                <div class="zoom-card">
+                    <a href="services/1" >
+                        <img src="laundry.jpg" class="img-thumbnail">
+                    </a>
+                    <p class="center">Laundry</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="zoom-card">
+                    <a href="services/2" >
+                        <img src="dishes.jpg" class="img-thumbnail">
+                    </a>
+                    <p class="center">Dish Wash</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="zoom-card">
+                    <a href="services/3" >
+                        <img src="car.jpg" class="img-thumbnail">
+                    </a>
+                    <p class="center">Vehicle Wash</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="zoom-card">
+                    <a href="services/4" >
+                        <img src="electric.jpg" class="img-thumbnail">
+                    </a>
+                    <p class="center">Electric Repair</p>
+                </div>
+            </li>
+        </ul>
     </div>
   <% else %>
     <body class="home-page-padding">  </body>
@@ -47,7 +59,7 @@
             <!-- Section A -->
             <section id="section-a" class="grid">
                 <div class="content-wrap">
-                    <h2 class="content-title"> Providing the best service </h2>
+                    <h2 class="content-title"> Providing best service </h2>
                     <div class="content-text">
                         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nihil incidunt perspiciatis, vel doloribus ut aliquam cum voluptatem placeat rerum quibusdam! Illo eaque facere repudiandae, ipsum nam sapiente excepturi, natus magnam numquam in amet eius dolores fuga iure, tempore labore!</p>
                     </div>

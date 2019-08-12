@@ -1,3 +1,63 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Reviews styles */
+
+@mixin box_sizing {
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
+}
+
+@mixin background-tile {
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 1px 1px rgb(158, 155, 155);
+    padding: 0.6em 0.6em;
+}
+
+.reviews {
+
+    @include background-tile;
+    // width:"90%"
+    list-style: none;
+    background-color: darken(#ffffff, 5%);
+    li {
+      margin-right: 0px;
+      padding: 10px 0;
+      border-top: 1px solid #d4cfcf;
+    }
+  
+    .review {
+
+    // border-bottom: 1px solid gainsboro;
+        // margin-bottom: 15px;
+    // padding-bottom: 10px;
+    
+
+    .user {
+    color: #000000;
+    margin-top: 5em;
+    
+    padding-top: 0;
+    }
+    
+    .review-rating {
+    color: #000000;
+    display: block;
+    }
+
+        .review-comment {
+            font-size: 1.05em;
+            line-height: 1.5;
+    }
+    }
+
+    .new-review {
+        padding-top: 8px;
+    }
+
+}

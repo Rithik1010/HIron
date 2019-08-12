@@ -1,3 +1,32 @@
 // Place all the styles related to the Services controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.service-images {
+    
+    img {
+        width: 100%;
+        height: auto;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    @media(min-width: 700px) {
+        
+        ul {
+            display: flex;
+            justify-content: space-around;
+        }
+    
+        li {
+            width: 23%;
+        }
+    }
+}
+
+

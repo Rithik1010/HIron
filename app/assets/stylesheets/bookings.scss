@@ -1,3 +1,59 @@
 // Place all the styles related to the Bookings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* Bookings index */
+
+.bookings {
+    list-style: none;
+    padding: 0;
+
+    li {
+        padding: 10px 0;
+        border-top: 1px solid #e8e8e8;
+        margin-left: 60px;
+    }
+    .partner {
+        // text-decoration: none;  
+        color: rgb(126, 114, 114);
+        margin-top: 5em;
+        
+        padding-top: 5px 0;
+    }
+
+    .service{
+        display: block;
+        
+        img {
+        display: block;
+        padding: 5px 0;
+        }
+    }
+    .Address {
+        display: block;
+        
+        img {
+        display: block;
+        padding: 5px 0;
+        }
+    }
+    .timestamp {
+        font-size: 80%;
+        color: rgb(78, 68, 68);
+        display: block;
+        
+    }
+
+    .Bookid {
+        display: block;
+        
+    }
+
+    .gravatar {
+        float: left;
+        margin-right: 10px;
+        margin-top: 5px;
+    }
+}
+  

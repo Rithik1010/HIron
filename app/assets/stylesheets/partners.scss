@@ -1,3 +1,49 @@
 // Place all the styles related to the Partners controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* partners */
+
+.partners {
+  
+    // @include background-tile;
+    list-style: none;
+    padding: 0;
+    
+    li {
+      // @include background-tile;
+      padding: 10px 0;
+      border-top: 1px solid #e8e8e8;
+    }
+  
+    .partner {
+      margin-top: 5em;
+      padding-top: 0;
+      color: #000;
+      text-decoration: none;
+      &:hover {
+        color: #fff;
+      }
+    }
+    .description {
+      display: block;
+      margin-left: 60px;
+      img {
+        display: block;
+        padding: 5px 0;
+      }
+    }
+    .avg-rating {
+          font-size: 1.5em;
+          margin-top: 75px;
+          margin-bottom: 5px;
+          font-weight: bold;
+      }
+    aside {
+      textarea {
+        height: 100px;
+        margin-bottom: 5px;
+      }
+    }
+}
+  
